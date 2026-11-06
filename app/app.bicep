@@ -39,7 +39,7 @@ resource voteContainer 'Radius.Compute/containers@2025-08-01-preview' = {
         image: redisImage
       }
       vote: {
-        image: 'ghcr.io/nithyatsu/example-voting-app-vote:${imageTag}'
+        image: 'ghcr.io/nithyatsu/example-voting-app-vote:${missingParam}'
         ports: {
           web: {
             containerPort: 80
