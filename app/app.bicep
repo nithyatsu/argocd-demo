@@ -39,7 +39,7 @@ resource voteContainer 'Radius.Compute/containers@2025-08-01-preview' = {
         image: redisImage
       }
       vote: {
-        image: 'ghcr.io/nithyatsu/example-voting-app-vote:${missingParam}'
+        image: 'ghcr.io/nithyatsu/example-voting-app-vote:${imageTag}'
         ports: {
           web: {
             containerPort: 80
@@ -47,10 +47,10 @@ resource voteContainer 'Radius.Compute/containers@2025-08-01-preview' = {
         }
         env: {
           OPTION_A: {
-            value: 'ArgoCD'
+            value: 'Argo CD'
           }
           OPTION_B: {
-            value: 'Flux'
+            value: 'Flux CD'
           }
           REDIS_HOST: {
             value: 'localhost'
