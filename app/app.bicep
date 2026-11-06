@@ -29,7 +29,7 @@ resource postgresDb 'Radius.Data/postgreSqlDatabases@2025-08-01-preview' = {
   }
 }
 
-resource voteContainer 'Radius.Compute/containerss@2025-08-01-preview' = {
+resource voteContainer 'Radius.Compute/containers@2025-08-01-preview' = {
   name: 'vote'
   properties: {
     environment: environment
